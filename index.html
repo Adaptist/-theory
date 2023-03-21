@@ -30,10 +30,10 @@
               <a class="menu-link link" href="./index.html">Home</a>
             </li>
             <li class="header-menu-item">
-              <a class="menu-link link current" href="#skills">Skills</a>
+              <a class="menu-link link" href="#skills">Skills</a>
             </li>
             <li class="header-menu-item">
-              <a class="menu-link link" href="#about">About Us</a>
+              <a class="menu-link link current" href="#about">About Us</a>
             </li>
             <li class="header-menu-item">
               <a class="menu-link link" href="#pricing">Pricing</a>
@@ -43,7 +43,9 @@
             </li>
           </ul>
         </nav>
-        <button class="header-button" type="button">Let&rsquo;s Talk</button>
+        <button class="header-button" data-modal-open type="button">
+          Let&rsquo;s Talk
+        </button>
       </div>
     </header>
     <main>
@@ -80,7 +82,7 @@
               </p>
               <p class="skills-list__text">
                 Learn English online and improve your skills through our
-                high-quality courses and resources &ndash; all designed for adult
+                high-quality courses and resources – all designed for adult
                 language learners.
               </p>
               <button class="skills-list__btn" type="button">Learn more</button>
@@ -166,11 +168,26 @@
               </li>
             </ul>
           </div>
-          <img
-            src="./img/about-bg.png"
-            alt="together with us to success"
-            width="540"
-          />
+          <div class="">
+            <img
+              src="./img/about-bg.png"
+              alt="together with us to success"
+              width="540"
+            />
+            <form class="footer-form">
+              <input
+                class="footer-form-input"
+                type="email"
+                placeholder="email"
+              />
+              <button class="footer-form-btn" type="submit">
+                submit
+                <svg class="submit-icon" width="35" height="30">
+                  <use href="./img/symbol-defs.svg#icon-insta"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </section>
       <section class="pricing">
@@ -231,7 +248,7 @@
               <div class="pricing-list__midle">
                 <h3 class="pricing-list-title">Personal Tuition</h3>
                 <p class="pricing-text">
-                  Online one-to-one English tutoring &ndash; enjoy our first session
+                  Online one-to-one English tutoring – enjoy our first session
                   for only $1
                 </p>
               </div>
@@ -239,6 +256,25 @@
                 <p class="pricing-price">&pound;12.99</p>
                 <p class="pricing-period">per month</p>
               </div>
+            </li>
+          </ul>
+          <ul class="test-list">
+            <li class="test-list-item">
+              <a class="test-list-link" href="">
+                <div class="wrapper">
+                  <img src="./img/skills-1.png" alt="sadasdsad" />
+                  <div class="overlay">
+                    <p class="overlay-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Autem, et.
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <h3>asd</h3>
+                  <p>fgfhf</p>
+                </div>
+              </a>
             </li>
           </ul>
         </div>
@@ -278,7 +314,107 @@
             >
           </li>
         </ul>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a
+              class="social-list__link"
+              href=""
+              target="_blank"
+              rel="noopener noreferer"
+              aria-label="link to insta"
+            >
+              <svg class="social-list__icon" width="16" heigth="16">
+                <use href="./img/symbol-defs.svg#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="">
+              <svg class="social-list__icon" width="16" height="16">
+                <use href="./img/symbol-defs.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="">
+              <svg class="social-list__icon" width="16" height="16">
+                <use href="./img/symbol-defs.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="">
+              <svg class="social-list__icon" width="16" height="16">
+                <use href="./img/symbol-defs.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" data-modal-close>
+          <svg width="16" height="16">
+            <use href="./img/symbol-defs.svg#icon-twitter"></use>
+          </svg>
+        </button>
+        <form class="modal-form">
+          <strong>Lorem ipsum dolor sit amet</strong>
+          <div class="modal-group">
+            <label class="modal-label" for="name">user name</label>
+            <div class="input-wrapper">
+              <input class="modal-input" type="text" id="name" />
+              <svg class="modal-icon" width="16" height="16">
+                <use href="./img/symbol-defs.svg#icon-twitter"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-group">
+            <label class="modal-label" for="tel">telephone</label>
+            <div class="input-wrapper">
+              <input class="modal-input" type="tel" id="tel" />
+              <svg class="modal-icon" width="16" height="16">
+                <use href="./img/symbol-defs.svg#icon-insta"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-group">
+            <label class="modal-label" for="email">email</label>
+            <div class="input-wrapper">
+              <input class="modal-input" type="email" id="email" />
+              <svg class="modal-icon" width="16" height="16">
+                <use href="./img/symbol-defs.svg#icon-facebook"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-group">
+            <label class="modal-label" for="comment">comment</label>
+            <textarea
+              class="modal-comments"
+              name="comment"
+              id="comment"
+              rows="5"
+            ></textarea>
+          </div>
+          <div class="modal-checkbox">
+            <input
+              class="modal-checkbox-input visually-hidden"
+              type="checkbox"
+              id="checkbox"
+            />
+            <label class="modal-checkbox-label" for="checkbox">
+              <span class="modal-checkbox-custom">
+                <svg class="modal-checkbox-icon" width="16" height="16">
+                  <use href="./img/symbol-defs.svg#icon-insta"></use>
+                </svg>
+              </span>
+              Lorem ipsum dolor </label
+            ><a href="">sit amet</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
